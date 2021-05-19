@@ -1,0 +1,19 @@
+var img = new SimpleImage("smallhands.png");
+print(img);
+
+for(var pixel of img.values())
+if (pixel.getRed()==255){
+    pixel.setRed(100);
+}
+if (pixel.getGreen()==100){
+    pixel.setGreen(255);
+}
+
+function swapRedGreen(pixel) {	
+     var newGreen = pixel.getRed();	
+     var newRed = pixel.getGreen();	
+     pixel.setGreen(newGreen);	
+     pixel.setRed(newRed);	
+     return pixel;
+}
+print(img);
