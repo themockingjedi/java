@@ -1,0 +1,15 @@
+var img = new SimpleImage("hilton.jpg");
+print(img);
+var w = img.getWidth();
+var h = img.getHeight();
+print(w,h);
+
+for (var strip of img.values()) 
+   if (strip.getX()<=img.getWidth()/3){
+       strip.setRed(255);
+   }
+   else if (w/3 < strip.getX()&&strip.getX()<w*2/3){
+       strip.setGreen(255);
+   }
+   else (strip.setBlue(255));
+print(img);
